@@ -1,0 +1,30 @@
+<!--main layout for website-->
+<!DOCTYPE HTML>
+<html lang="en">
+<head>
+	<title>CT Skill Challenge</title>
+	<link rel="stylesheet" href="{{ url_for('static', filename= 'styles.css') }}">
+	<link rel="stylesheet" href="{{ url_for('static', filename= 'bootstrap-3.3.7-dist/css/bootstrap.min.css') }}">
+	<script type="text/javascript" src="{{url_for('static',filename='jquery-3.1.1.min.js')}}"></script>
+
+
+</head>
+<body>
+	<br>
+	<div id="nav">
+		<div id="nav_wrapper">
+			<ul>
+				<h1>Team Habibi</h1> 
+				<li><a href="{{url_for('run')}}">Home</a></li>
+				<li><a href="{{ url_for('run_mapp22') }}">Maps</a></li> 
+			</ul>
+		</div>
+		
+	</div>	
+	{% block content %}
+	{% endblock %}
+	
+	<script type="text/javascript" src="{{url_for('static',filename='Highcharts-5.0.5/code/highcharts.js')}}"></script>
+	<script type="text/javascript" src="{{url_for('static',filename='Highcharts-5.0.5/code/highcharts-3d.js')}}"></script>
+</body>
+</html>

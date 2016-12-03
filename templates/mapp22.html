@@ -1,0 +1,56 @@
+<!doctype html>
+<head>
+ <title>Habibi Crew</title>
+	<link rel="stylesheet" href="{{ url_for('static', filename= 'leaflet073.css') }}"/>
+	<link rel="stylesheet" href="{{ url_for('static', filename= 'styles.css') }}">
+	 <script src="http://cdn.leafletjs.com/leaflet-0.7.3/leaflet.js"></script>
+<!--	<style type='text/css'>
+		/*body { margin: 50px; }*/
+		#output {
+			display: block;
+			margin: 0 auto;
+		}
+	</style> -->
+</head>
+<body>
+	<br>
+	<div id="nav">
+		<div id="nav_wrapper">
+			<ul>
+				<h1>Team Habibi</h1> 
+				<li><a href="{{url_for('run')}}">Home</a></li>
+				<li><a href="{{ url_for('run_mapp22') }}">Maps</a></li> 
+			</ul>
+		</div>
+		
+	</div>	<br>
+	<div style="margin-left:250px; background-color:#EEEEEE; text-align:center;width:60%; height: 200px;">
+		<h2> Connecticut Skills Challenge</h2>
+		<p>  <strong>Map </strong><br>
+			This map will allow the user to look for a school, which show their location and surrounding environment
+		</p>	
+	</div><br>
+<h1 id='h1'>	
+</h1>
+<div id="mapDiv">
+</div>
+<div style="color:white;font-size:13px;text-align:center">
+	Please select a school to see it in the map
+</div>
+<select id='schools' style='margin-left: 300px'>
+</select>
+
+<input id='schoolCoordBtn' type="button" value='Show School'> 
+
+<br><br>
+
+<!-- <textarea id='output' rows='30' cols='60' readonly>
+</textarea> -->
+
+<script type="text/javascript" src="{{url_for('static',filename='jwhatever.js')}}"></script>
+<script type="text/javascript" src="{{url_for('static',filename='map/jquery-3.1.1.min.js')}}"></script>
+<script type="text/javascript" src="{{url_for('static',filename='map/school.js')}}"></script>
+<script type="text/javascript" src="{{url_for('static',filename='map/content.js')}}"></script>
+
+</body>
+</html>

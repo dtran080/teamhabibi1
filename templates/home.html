@@ -1,0 +1,70 @@
+{% extends "layout.html" %}
+{% block content %}
+<div class="jumbotron" id="mission">
+		<h2> Connecticut Skills Challenge</h2>
+		<p>  <strong>This is Team Habibi and here is our idea: </strong><br>
+			We're going to develop an application that help people who are planning move into the state of Connecticut. This app allow them to look into the schools, including its location, population, and surrounding environment (hospital, parks, police station,...)
+		</p>	
+	</div>
+	
+	<br>
+	<div class="row">
+		<div class="col-md-6">
+			<div class="panel panel-primary">
+  				<div class="panel-heading">
+   					 <h3 class="panel-title">Schools per district</h3>
+  				</div>
+  				<div class="panel-body">
+    				<div id="container" class="graphs" ></div>
+  				</div>
+			</div>
+		</div>
+		<div class="col-md-6">
+			<div class="panel panel-primary">
+  				<div class="panel-heading">
+   					 <h3 class="panel-title">Polices stations, Hospitals, and Parks</h3>
+  				</div>
+  				<div class="panel-body">
+    				<div id="container2" class="graphs"></div>
+  				</div>
+			</div>
+		</div>
+	</div>
+	<div class="row">
+		<div class="col-md-6">
+			<div class="panel panel-primary">
+  				<div class="panel-heading">
+   					 <h3 class="panel-title">Accountability</h3>
+  				</div>
+  				<div class="panel-body">
+    				<div id="container5" class="graphs"></div>
+  				</div>
+			</div>
+		</div>
+		<div class="col-md-6">
+			<div class="panel panel-primary">
+  				<div class="panel-heading">
+   					 <h3 class="panel-title">Population Graph</h3>
+  				</div>
+  				<div class="panel-body">
+    				<div id="container4" class="graphs"></div>
+  				</div>
+			</div>
+		</div>
+	</div>
+	<div class="row">
+		<div class="col-md-6">
+			<div class="panel panel-primary">
+  				<div class="panel-heading">
+   					 <h3 class="panel-title">SPI Index</h3>
+  				</div>
+  				<div class="panel-body">
+    				<div id="container6" class="graphs"></div>
+  				</div>
+			</div>
+		</div>
+		
+	</div>
+	
+<script type="text/javascript" src="{{url_for('static',filename='repository.js')}}"></script>
+{% endblock %}
